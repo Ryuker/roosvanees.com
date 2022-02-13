@@ -62,7 +62,7 @@ function aboveTheFold() {
 
 // used to concatenate the files in a specific folder
 var jsSRC = [
-  'src/js/jquery-r.5.1.min.js',
+  'src/js/jquery-3.5.1.min.js',
   'src/js/slick.min.js',
   'src/js/jquery.fittext.js',
   'src/js/main.js'
@@ -107,7 +107,7 @@ function watch() {
   browserSync.init({
     server: './dist'
   });
-  gulp.watch('src/scss/**/*.scss', gulp.series([scss, concatCSS]).on('change', browserSync.reload));
+  gulp.watch('src/scss/**/*.scss', gulp.series([scss, concatCSS])).on('change', browserSync.reload);
   gulp.watch('src/js/*js', js);
   gulp.watch('src/html/*.html', html).on('change', browserSync.reload);
   gulp.watch('src/html/**/**/*.html', html).on('change', browserSync.reload);
