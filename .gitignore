@@ -1,0 +1,2 @@
+#files to ignore when committing to repository
+node_modules
