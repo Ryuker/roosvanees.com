@@ -1,2 +1,14 @@
 .top-link {
 }
+
+.navbar {
+  display: block;
+
+  &--navmenu {
+    display:inline;
+
+    ul li {
+      display: inline;
+    }
+  }
+}
