@@ -7,4 +7,4 @@
 **to run:**
 - install node v12 using nvm
 - $ gulp
--to close gulp: ctrl+c
+- to close gulp: ctrl+c
