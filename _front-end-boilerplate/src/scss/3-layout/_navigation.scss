@@ -1,8 +1,11 @@
 .nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
   padding: 0;
   background-color: rgb(82, 165, 197);
   display: block;
-  
+
   &__content {
     // background-color: aqua;
     padding: 0 40px;
@@ -10,8 +13,12 @@
     justify-content: space-between;
     
     &__brand { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin: 0;
       align-items: flex-start;
-      // background-color: rgb(35, 112, 143);
 
       &__title {
         font-size: 1.5rem;
@@ -21,6 +28,10 @@
       &__subtitle {
         font-size: 0.8rem;
         color: white;
+        span {
+          margin: 0;
+          padding: 0;
+        }
       }
 
       
@@ -34,7 +45,6 @@
 
     &__menu {
       align-items: flex-end;
-      // background-color: rgb(35, 190, 139);
       color: white;
 
       ul {
@@ -42,18 +52,19 @@
 
         li{
           display: inline;
+          padding: 0 20px;
           line-height: 70px;
           margin: 0;
-          
-          // background-color: rgb(58, 99, 116);
   
           a {
-            padding: 0 20px;
             color: white;
             text-decoration: none;
   
           }
-    
+        }
+
+        li:last-child {
+          padding-right: 0;
         }
       }
 
@@ -95,4 +106,10 @@
     }
 
   }
+  @include media-breakpoint-down(md){
+    position: sticky;
+    top:0;
+    left:0;
+  }
+
 }
