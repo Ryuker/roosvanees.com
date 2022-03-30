@@ -66,6 +66,18 @@
         }
       }
 
+      &__contact {
+        display: flex;
+        justify-content: center;
+        background-color: aquamarine;
+
+        a {
+          padding: 0 10px;
+          text-decoration: none;
+        }
+        
+      }
+
       @include media-breakpoint-down(sm) {
         background-color: aqua;
         width: 100%;
