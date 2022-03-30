@@ -9,7 +9,6 @@
   display: block;
 
   &__content {
-    position: ;
     // background-color: aqua;
     padding: 0 40px;
     display: flex;
@@ -110,9 +109,6 @@
 
   }
   @include media-breakpoint-down(md){
-    position: sticky;
-    top:0;
-    left:0;
   }
 
 }
