@@ -1,5 +1,7 @@
 .nav-bar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  align-items: flex-start;
   top: 0;
   left: 0;
   padding: 0;
@@ -7,6 +9,7 @@
   display: block;
 
   &__content {
+    position: ;
     // background-color: aqua;
     padding: 0 40px;
     display: flex;
