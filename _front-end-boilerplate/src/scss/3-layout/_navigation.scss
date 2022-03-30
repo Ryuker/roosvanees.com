@@ -1,11 +1,17 @@
-.navbar {
+.nav-bar {
+  padding: 0;
   background-color: rgb(82, 165, 197);
   display: block;
-
+  
   &__content {
+    // background-color: aqua;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
     
     &__brand { 
-      background-color: rgb(35, 112, 143);
+      align-items: flex-start;
+      // background-color: rgb(35, 112, 143);
 
       &__title {
         font-size: 1.5rem;
@@ -27,8 +33,10 @@
     }
 
     &__menu {
-      
+      align-items: flex-end;
+      // background-color: rgb(35, 190, 139);
       color: white;
+
       ul {
         margin: 0;
 
@@ -40,6 +48,7 @@
           // background-color: rgb(58, 99, 116);
   
           a {
+            padding: 0 20px;
             color: white;
             text-decoration: none;
   
@@ -47,10 +56,43 @@
     
         }
       }
+
+      @include media-breakpoint-down(md){
+        display: none;
+
+        ul {
+          display: none;
+        }
+      }
       
     }
 
-  }
+    &__nav-toggle {
+      align-items: flex-end;
+      display: none;
 
-  
+      @include media-breakpoint-down(md){
+        display: flex;   
+        align-items: center;
+        align-self: center;     
+
+        a {
+          color: white;
+          svg {
+            width: 40px;
+            fill: white;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md){
+      padding: 0 15px;
+    }
+
+    @include media-breakpoint-down(sm){
+      padding: 0 10px;
+    }
+
+  }
 }
