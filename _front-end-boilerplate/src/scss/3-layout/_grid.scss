@@ -167,7 +167,8 @@
         height: 50px;
         flex-wrap: wrap;
 
-        padding: 5px;
+        padding: 10px;
+
 
         background-color: rgb(52, 4, 163);
 
@@ -232,6 +233,64 @@
 
         }
 
+      }
+
+      &__clients-bar {
+        padding: 5px 10px;
+
+        ul {
+
+          li {
+            display: inline;
+            padding: 0 5px;
+
+            a {
+              text-decoration: none;
+
+              img {
+                background-color: aqua;
+                width: 80px;
+                height: 80px;
+
+                min-width: 50px;
+                min-height: 50px; 
+
+                @include media-breakpoint-down(lg) {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__button {
+        background-color: aliceblue;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+
+        a {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      }
+
+      &__button:hover {
+        background-color: aqua;
+
+        & > a:hover {
+          color: rgb(17, 94, 94) !important;
+          font-size: 1.2em;
+        }
       }
 
     }
