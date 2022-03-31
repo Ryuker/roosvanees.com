@@ -93,6 +93,7 @@
         &__social-icons {
           justify-content: center;
           height: 200px;
+          width: 100%;
         }
       }
     }
@@ -113,6 +114,10 @@
           font-size: 0.8em;
           align-self: center;
         }
+      }
+
+      @include media-breakpoint-down(sm){
+        max-width: none;
       }
     }
 
