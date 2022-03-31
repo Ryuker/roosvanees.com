@@ -134,4 +134,72 @@
   }
 }
 
+.featured-section {
+  background-color: rgb(211, 21, 37);
+
+
+  &__wrapper {
+    padding: 20px;
+    
+
+    &__content {
+      background-color: black;
+      color: white;
+      padding: 5px;
+
+      &__info-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        height: 50px;
+        flex-wrap: wrap;
+
+        background-color: rgb(52, 4, 163);
+
+        &__title {
+          text-transform: uppercase;
+          order: 1;
+        }
+
+        & > span {
+          order: 2;
+          @include media-breakpoint-down(sm) {
+            background-color: aqua;
+            order: 3;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            // flex: 3;
+          }
+
+          @include media-breakpoint-down(sm) {
+            flex-direction: column;
+          }
+        }
+
+        &__social-icons {
+          order: 3;
+
+          @include media-breakpoint-down(sm) {
+            order: 2;
+          }
+        }
+        
+      }
+
+      &__feat-project {
+        
+      }
+
+    }
+
+
+  }
+
+}
+
 
