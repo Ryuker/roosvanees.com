@@ -164,7 +164,7 @@
         align-items: center;
         align-content: center;
         justify-content: space-between;
-        height: 50px;
+        height: 55px;
         flex-wrap: wrap;
 
         padding: 10px;
@@ -175,6 +175,16 @@
         &__title {
           text-transform: uppercase;
           order: 1;
+
+          h5 {
+            padding: 0;
+            margin: 0;
+            @include media-breakpoint-down(sm) {
+              margin: 0;
+              padding-top: 3px;
+            }
+            
+          }
         }
 
         span {
