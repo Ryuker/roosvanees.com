@@ -308,4 +308,22 @@
 
 }
 
+.single-col {
+  width:100%;
+  &__wrapper {
+    width: 100%;
+    padding: 0 20px;
+    h2 {
+      background-color: black;
+      text-transform: uppercase;
+      color: white;
+    }
+    p {
+      padding: 0 10px;
+      
+    }
+  }
+
+}
+
 
