@@ -310,20 +310,68 @@
 
 .single-col {
   width:100%;
+  display: flex;
+  justify-content: center;
+
   &__wrapper {
+    background-color: aquamarine;
     width: 100%;
-    padding: 0 20px;
+    max-width: 1200px;
+
     h2 {
+      padding: 0 20px;
       background-color: black;
       text-transform: uppercase;
       color: white;
     }
-    p {
-      padding: 0 10px;
+
+    .content {
+      padding: 0 20px;
       
+      p {
+        
+      }
     }
   }
+}
 
+.clients {
+  width:100%;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+
+    h2 {
+      color: white;
+    }
+
+    p {
+      color: white;
+    }
+
+    .client-logos {
+      color: white;
+      ul {
+        display: inline-flex;
+
+        li {
+          padding: 10px;
+          img {
+
+          }
+
+        }
+      }
+    }
+
+    
+
+  }
 }
 
 
