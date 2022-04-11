@@ -385,4 +385,59 @@
   }
 }
 
+.recommendations {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+
+    h2 {
+      color: white;
+    }
+
+    p {
+      color: white;
+    }
+
+    .recommendation-list {
+      ul {
+        padding: 0;
+        li {
+
+        }
+      }
+
+    }
+
+    .recommendation {
+      max-width: 500px;
+      background-color: aqua;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        width: 100%;
+      }
+
+      .recommender {
+        width: 100%;
+        background-color: rgb(16, 95, 69);
+        justify-self: flex-end;
+
+      }
+
+      
+    }
+
+
+  }
+}
 
