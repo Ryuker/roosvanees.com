@@ -409,8 +409,28 @@
     .recommendation-list {
       ul {
         padding: 0;
-        li {
 
+        li {
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 40px;
+          }
+
+          margin-bottom: 20px;
+          
+        }
+
+        li:nth-child(odd)  {
+          // background-color:blue;
+          display: flex;
+          justify-content: flex-start;
+
+
+        }
+
+        li:nth-child(even) {
+          // background-color: blueviolet;
+          display: flex;
+          justify-content: flex-end;
         }
       }
 
