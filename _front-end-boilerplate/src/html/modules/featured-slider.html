@@ -1,19 +1,26 @@
-<br><br><br><br>
-<div class="featured-slider">
-  <div class="slider-nav">
-    <div class="slider-nav-left"></div>
-    <div class="slider-nav-right"></div>
-  </div>
-  <div class="slider-dots">
+<header class="has-bg-media container-fluid">
+  <div class="nav-buttons">
+    <button class="slider-nav-prev">
+      <i class="fas fa-angle-left"></i>
+    </button>
+    <button class="slider-nav-next">
+      <i class="fas fa-angle-right"></i>
+    </button>
   </div>
 
-  <div class="slide">
-    slide 1 - Mijn Schuld
+  <!-- <div class="slider-dots">
+  </div> -->
+
+  <div class="full-screen-media-slider" style="min-height: 100%;">
+    <div class="slide">
+      @@include('../featured-slides/slide1.html')
+    </div>
+    <div class="slide">
+      @@include('../featured-slides/slide2.html')
+    </div>
+    <div class="slide">
+      @@include('../featured-slides/slide3.html')
+    </div>
   </div>
-  <div class="slide">
-    slide 2 - Zomergasten
-  </div>
-  <div class="slide">
-    slide 3 - Sunny Bergman Docu's
-  </div>
-</div>
+  
+</header>
