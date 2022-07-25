@@ -1,5 +1,40 @@
 jQuery(document).ready(function () {
 
+  // mobile nav toggle:
+  jQuery('.nav-toggle').on('click', function() {
+    console.log("klik!!");
+
+    // menu starts closed, each click toggles it
+    jQuery('nav').toggleClass('menu-closed');
+
+    // change to x icon
+    jQuery(this).find('i').toggleClass('fa-times'); 
+    
+    // change to hamburger  icon
+    jQuery(this).find('i').toggleClass('fa-bars');  
+    
+     // hide footer
+    jQuery('footer').toggleClass('hide');          
+
+    jQuery('body').toggleClass('mobile-nav-open');
+  });
+
+
+
+  // shrink navbar when scrolling down
+  jQuery(document).on("scroll",function(){
+    if (jQuery(document).scrollTop() > 100){
+      jQuery('.container--nav').addClass('shrink-nav-cont');
+      jQuery('.navbar').addClass('shrink');
+      jQuery('.navbar').find('.logo').addClass('logo--scrolled');
+    }else {
+      jQuery('.container--nav').removeClass('shrink-nav-cont');
+      jQuery('.navbar').removeClass('shrink');
+      jQuery('.navbar').find('.logo').removeClass('logo--scrolled');
+    }
+  });
+
+
   // if(jQuery(window).outerWidth() < 1185) {
   //   jQuery('<i class="fas fa-chevron-down"></i>').insertBefore('nav > ul > li.menu-item-has-children > ul');
   //   // jQuery('<span class="subpull"><i class="fas fa-chevron-down"></i></span>').insertBefore('ul.nav > li.menu-item-has-children > ul');
