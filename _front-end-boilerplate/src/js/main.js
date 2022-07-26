@@ -23,7 +23,6 @@ jQuery(document).ready(function () {
 
   // shrink navbar when scrolling down
   jQuery(document).on("scroll",function(){
-    console.log("scrolling");
     if (jQuery(document).scrollTop() > 100){
       jQuery('.container--nav').addClass('shrink-nav-cont');
       jQuery('.navbar').addClass('navbar--shrink');
