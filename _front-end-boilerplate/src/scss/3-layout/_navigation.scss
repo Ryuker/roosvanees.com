@@ -2,9 +2,10 @@
   background: $black;
   position: fixed;
   width: 100%;
-  height: 120px;
+  height: 100px;
   z-index: 10;
   padding: 0 40px;
+  transition: height 0.2s, background 0.2s;
 
   .navbar {
     position: fixed;
@@ -13,34 +14,30 @@
     top: 0;
     left: 0;
     padding: 0;
-    background-color: rgb(82, 165, 197);
+    // background-color: rgb(82, 165, 197);
     display: block;
     z-index: 9;
-
-    &--shrink {
-      background-color: red;
-      
-      .content {
-        color: purple;
-      }
-    }
 
     .content {
       // background-color: aqua;
       padding: 0 40px;
       display: flex;
+      height: 80px;
       justify-content: space-between;
+      transition: font-size 0.2s, height 0.2s;
       
       .brand { 
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        align-items: flex-start;
         padding: 0;
         margin: 0;
-        align-items: flex-start;
 
         .title {
           font-size: 1.5rem;
+          line-height: 1.2rem;
           color: white;
         }
 
@@ -58,12 +55,15 @@
 
         ul {
           margin: 0;
+          height: 100%;
+          display: flex;
 
           li{
-            display: inline;
+            display: flex;
+            height: 100%;
             padding: 0 20px;
-            line-height: 70px;
             margin: 0;
+            align-items: center;
     
             a {
               color: white;
@@ -120,14 +120,48 @@
     }
     @include media-breakpoint-down(md){
     }
+
+    &--shrink {
+      // background-color: red;
+      
+      .content {
+        // background-color: blueviolet;
+        color: purple;
+        height: 50px;
+        font-size: 0.8rem;
+
+        .brand {
+          margin-top: 5px;
+
+          .title {
+            // line-height: 5rem;
+          }
+        }
+
+        
+      }
+    }
   }
 
   &.shrink-nav-cont {
-    height: 70px;
+    height: 47px;
     background: $black;
     transition: height 0.2s, background 0.2s;
     
 
+    .content {
+      transition: font-size 0.2s, height 0.2s;
+
+      .brand {
+
+        .title {
+          // transition: line-height 0.2s;
+        }
+      }
+
+
+    }
+    
     .brand--scrolled {
       transition: width 0.5s;
     }
