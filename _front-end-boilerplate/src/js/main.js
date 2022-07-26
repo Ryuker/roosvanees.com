@@ -23,13 +23,14 @@ jQuery(document).ready(function () {
 
   // shrink navbar when scrolling down
   jQuery(document).on("scroll",function(){
+    console.log("scrolling");
     if (jQuery(document).scrollTop() > 100){
       jQuery('.container--nav').addClass('shrink-nav-cont');
-      jQuery('.navbar').addClass('shrink');
+      jQuery('.navbar').addClass('navbar--shrink');
       jQuery('.navbar').find('.logo').addClass('logo--scrolled');
     }else {
       jQuery('.container--nav').removeClass('shrink-nav-cont');
-      jQuery('.navbar').removeClass('shrink');
+      jQuery('.navbar').removeClass('navbar--shrink');
       jQuery('.navbar').find('.logo').removeClass('logo--scrolled');
     }
   });

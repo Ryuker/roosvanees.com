@@ -17,6 +17,14 @@
     display: block;
     z-index: 9;
 
+    &--shrink {
+      background-color: red;
+      
+      .content {
+        color: purple;
+      }
+    }
+
     .content {
       // background-color: aqua;
       padding: 0 40px;
@@ -128,4 +136,8 @@
       transition: background-color 5s;
     }
   }
+}
+
+.mobile-nav-open {
+  overflow: hidden;
 }
