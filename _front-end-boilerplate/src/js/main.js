@@ -6,6 +6,7 @@ jQuery(document).ready(function () {
 
     // menu starts closed, each click toggles it
     jQuery('nav').toggleClass('menu-closed');
+    jQuery('nav').toggleClass('menu-open');
 
     // change to x icon
     jQuery(this).find('i').toggleClass('fa-times'); 

@@ -1,5 +1,10 @@
 // global values
-$link-hover-color:  aqua;
+$link-regular-color: white;
+$link-hover-color:  rgb(151, 8, 8);
+
+a {
+  color: $link-regular-color;
+}
 
 a:hover {
   color:$link-hover-color;
