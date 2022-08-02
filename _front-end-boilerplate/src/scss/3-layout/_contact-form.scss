@@ -61,7 +61,7 @@
       color: grey; 
       display:flex; 
       flex-direction: column; 
-      margin-top: 10px;
+      margin-top: 80px;
       margin-bottom: 10px;
 
       span {
@@ -73,7 +73,7 @@
 
         @include media-breakpoint-down(md) {
           flex: 0 0 100%;
-          margin-top: 80px;
+          // margin-top: 80px;
           margin-bottom: 10px;
         }
       }
