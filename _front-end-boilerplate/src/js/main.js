@@ -21,7 +21,6 @@ jQuery(document).ready(function () {
   });
 
 
-
   // shrink navbar when scrolling down
   jQuery(document).on("scroll",function(){
     if (jQuery(document).scrollTop() > 100){
