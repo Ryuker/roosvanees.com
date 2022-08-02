@@ -1,7 +1,7 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
 
   // mobile nav toggle:
-  jQuery('.nav-toggle').on('click', function() {
+  jQuery('.nav-toggle').on('click', function(e) {
     console.log("klik!!");
 
     // menu starts closed, each click toggles it
@@ -22,7 +22,7 @@ jQuery(document).ready(function () {
 
 
   // shrink navbar when scrolling down
-  jQuery(document).on("scroll",function(){
+  jQuery(document).on("scroll",function() {
     if (jQuery(document).scrollTop() > 100){
       jQuery('.container--nav').addClass('shrink-nav-cont');
       jQuery('.navbar').addClass('navbar--shrink');
