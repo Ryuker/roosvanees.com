@@ -9,3 +9,33 @@ a {
 a:hover {
   color:$link-hover-color;
 }
+
+.container {
+  min-height:100%;
+  background-size:1px 100%; /* Control the width here*/
+  background-repeat:no-repeat;
+}
+
+@include media-breakpoint-down(xl){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1320px;
+  }
+}
+ 
+@include media-breakpoint-down(md){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 861px;
+  }
+}
+
+// @media (min-width: 768px) {
+//   .container, .container-md, .container-sm {
+//     max-width: 861px;
+//   }
+// }
+
+
+img {
+  max-width: 100%;
+}
+
