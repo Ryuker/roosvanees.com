@@ -657,12 +657,13 @@
     }
 
     figure {
-      background-color: aqua;
+      // background-color: aqua;
       position: relative;
       height: 100%;
       width: 100%;
       padding-bottom: 64.75%;
-      margin-bottom: 30px;
+      margin-bottom: 0;
+
       img {
         position: absolute;
         top: 0;

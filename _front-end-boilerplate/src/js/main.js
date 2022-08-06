@@ -100,6 +100,24 @@ jQuery(document).ready(function() {
     infinite: true,
   });
 
+
+  // section media sliders
+  $('.media-slider').each(function(){
+    jQuery(this).slick({
+      autoplay:false,
+      dots: true,
+      // appendDots:$(this).siblings('slider-dots'),
+      arrows: false,
+      // prevArrow: false,
+      // nextArrow: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      prevArrow: $(this).parent().find('.arrow-left'),
+      nextArrow: $(this).parent().find('.arrow-right')  
+    });
+  });
+
    
   // jQuery('.review--slider').slick({
   //   autoplay:false,
