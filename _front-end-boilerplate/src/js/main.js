@@ -1,7 +1,34 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
+  
+
+  // console.log(Fancybox);
+  //var selector = '.slick-slide:not(.slick-cloned)';
+
+  // Init fancybox, skip cloned elements
+  // $().fancybox({
+  //   selector: selector,
+  //   backFocus: false,
+  //   animationEffect: "fade"
+  // });
+
+  // $().fancybox({
+  //   selector : '.slick-slide:not(.slick-cloned)',
+  //   hash     : false
+  // });
+
+  // Custom click event on cloned elements, 
+  // $(document).on('click', '.slick-cloned', function (e) {
+  //   $(selector)
+  //     .eq(($(this).attr("data-slick-index") || 0) % $(selector).length)
+  //     .trigger("click.fb-start", {
+  //       $trigger: $(this)
+  //     });
+
+  //   return false;
+  // });
 
   // mobile nav toggle:
-  jQuery('.nav-toggle').on('click', function(e) {
+  jQuery('.nav-toggle').on('click', function (e) {
     console.log("klik!!");
 
     // menu starts closed, each click toggles it
@@ -9,25 +36,25 @@ jQuery(document).ready(function() {
     jQuery('nav').toggleClass('menu-open');
 
     // change to x icon
-    jQuery(this).find('i').toggleClass('fa-times'); 
-    
+    jQuery(this).find('i').toggleClass('fa-times');
+
     // change to hamburger  icon
-    jQuery(this).find('i').toggleClass('fa-bars');  
-    
-     // hide footer
-    jQuery('footer').toggleClass('hide');          
+    jQuery(this).find('i').toggleClass('fa-bars');
+
+    // hide footer
+    jQuery('footer').toggleClass('hide');
 
     jQuery('body').toggleClass('mobile-nav-open');
   });
 
 
   // shrink navbar when scrolling down
-  jQuery(document).on("scroll",function() {
-    if (jQuery(document).scrollTop() > 100){
+  jQuery(document).on("scroll", function () {
+    if (jQuery(document).scrollTop() > 100) {
       jQuery('.container--nav').addClass('shrink-nav-cont');
       jQuery('.navbar').addClass('navbar--shrink');
       jQuery('.navbar').find('.logo').addClass('logo--scrolled');
-    }else {
+    } else {
       jQuery('.container--nav').removeClass('shrink-nav-cont');
       jQuery('.navbar').removeClass('navbar--shrink');
       jQuery('.navbar').find('.logo').removeClass('logo--scrolled');
@@ -79,17 +106,17 @@ jQuery(document).ready(function() {
 
 
   // featured-slider code
-  jQuery('.slider-nav-prev').click(function(){
+  jQuery('.slider-nav-prev').click(function () {
     jQuery('.full-screen-media-slider').slick('slickPrev');
   });
 
-  jQuery('.slider-nav-next').click(function(){
+  jQuery('.slider-nav-next').click(function () {
     jQuery('.full-screen-media-slider').slick('slickNext');
   });
 
-  
+
   jQuery('.full-screen-media-slider').slick({
-    autoplay:true,
+    autoplay: true,
     dots: true,
     // appendDots:$(this).siblings('slider-dots'),
     arrows: false,
@@ -102,9 +129,9 @@ jQuery(document).ready(function() {
 
 
   // section media sliders
-  $('.media-slider').each(function(){
+  $('.media-slider').each(function () {
     jQuery(this).slick({
-      autoplay:false,
+      autoplay: false,
       dots: true,
       // appendDots:$(this).siblings('slider-dots'),
       arrows: false,
@@ -114,11 +141,14 @@ jQuery(document).ready(function() {
       slidesToScroll: 1,
       infinite: true,
       prevArrow: $(this).parent().find('.arrow-left'),
-      nextArrow: $(this).parent().find('.arrow-right')  
+      nextArrow: $(this).parent().find('.arrow-right')
     });
   });
 
-   
+  // remove fancyfox attribute from slick clones (to prevent duplicates in the gallery)
+  jQuery('.media-slider .slick-cloned a, .media-slider .slick-cloned img').removeAttr('data-fancybox');
+
+
   // jQuery('.review--slider').slick({
   //   autoplay:false,
   //   dots: true,
@@ -147,9 +177,9 @@ jQuery(document).ready(function() {
   //     },
   //   ]
   // });
-  
-  
- 
+
+
+
 });
 
 // var target = jQuery(".navbar").offset().top + jQuery(".navbar").outerHeight(),
@@ -169,3 +199,7 @@ jQuery(document).ready(function() {
 //         }, 250);
 //     }
 // });
+
+
+
+//remove slick duplicates in fancybox - src: https://stackoverflow.com/a/60080612

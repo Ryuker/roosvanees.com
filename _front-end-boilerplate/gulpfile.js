@@ -64,6 +64,7 @@ function aboveTheFold() {
 var jsSRC = [
   'src/js/jquery-3.5.1.min.js',
   'src/js/slick.min.js',
+  'src/js/fancyapps.js',
   'src/js/jquery.fittext.js',
   'src/js/main.js'
 ];
