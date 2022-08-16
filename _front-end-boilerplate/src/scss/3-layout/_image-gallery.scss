@@ -62,22 +62,43 @@ img {
 .image-gallery {
   width: 100%;
   padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 
-  .grid-wrapper > div {
+  @include media-breakpoint-down(md) {
+    padding: 0 0px;
+  }
+
+  a {
+    overflow: hidden;
+    background: red;
+    border-radius: 5px;
+
+    figure {
+      margin-bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .grid-wrapper > a {
     display: flex;
     justify-content: space-between;
     align-items: space-between;
     // padding: 0 40px;
   }
-  .grid-wrapper > div > img {
+  .grid-wrapper > a > figure > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    transition: opacity 1s, transform 0.5s;
     // some text
   }
   
   .grid-wrapper {
+    width: 80%;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,7 +106,13 @@ img {
     grid-auto-flow: dense;
     transition: grid-template-columns 2s;
 
-    & > div {
+    @include media-breakpoint-down(md) {
+      // background: blue;
+      width: 95%;
+      grid-template-columns: 50%;
+    }
+
+    & > a {
       &:hover {
         // grid-column: span 2;
         // grid-row: span 2;
@@ -100,10 +127,11 @@ img {
     }
 
     .normal-size {
-      
+      overflow: hidden;
     }
 
     .wide {
+      overflow: hidden;
       grid-column: span 2;
     }
 
