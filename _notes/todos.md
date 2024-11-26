@@ -9,7 +9,7 @@
 
 # Setup
   [] Setup AstroJS project
-  [] install and configure tailwind
+  [] install and configure Tailwind
   [] install and configure icon package
   [] configure aliasses to important folders
   
