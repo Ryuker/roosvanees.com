@@ -8,13 +8,13 @@ const {
   id,
   tooltipText = '',
   classes = " ",
-  colors = 'bg-se-blue-100 hover:bg-se-blue-200', 
+  colors = 'bg-pink-200 hover:bg-pink-300', 
   newTab = false
 } = Astro.props;
 
 ---
 
-<a target={newTab} href={url} class={`${classes} ${colors} px-4 md:px-6 py-3 min-w-20 rounded-lg flex justify-center items-center`} id={`btn-${id}`} aria-describedby="tooltip">
+<a target={newTab} href={url} class={`${classes} ${colors} border-2 border-pink-300 px-4 md:px-6 py-3 min-w-20 rounded-lg flex justify-center items-center`} id={`btn-${id}`} aria-describedby="tooltip">
   {icon && <Icon name={icon} class="text-lg" />}
   {text && text}
 </a>

@@ -4,14 +4,21 @@ import LinkButton from "./ui/LinkButton.astro";
 
 <section>
   <div class="container my-20 flex items-center flex-col">
-    <h1 class="text-3xl">Social Media</h1>
-    <div>
-      <LinkButton icon="fb" />
-      <LinkButton icon="x" />
-      <div>Instagram</div>
-      <div>FaceBook</div>
-      <div>X</div>
-      <div>TikTok</div>
+    <h1 class="text-3xl border-b-2 border-pink-300">Social Media</h1>
+    <div class="flex space-x-4 my-10">
+      <LinkButton icon="instagram" newTab={true} id="instagram" tooltipText="Instagram"
+        url="https://www.instagram.com/roosvanees"
+      />
+
+      <LinkButton icon="x" newTab={true} id="x" tooltipText="X"
+        url="https://twitter.com/roosvanees"
+      />
+      <LinkButton icon="fb" newTab={true} id="fb" tooltipText="Facebook"
+        url="https://www.facebook.com/roosvanees"
+      />
+      <LinkButton icon="tiktok" newTab={true} id="tiktok" tooltipText="TikTok"
+        url="https://www.tiktok.com/@roosvanees"
+      />
     </div>
     <div class="my-10 flex flex-col items-center">
       <div>Let's talk</div>
