@@ -8,10 +8,10 @@
 - domain is to redirect to the pages index like is the case for smasheurope.com
 
 # Setup
-  [] Setup AstroJS project
-  [] install and configure Tailwind
-  [] install and configure icon package
-  [] configure aliasses to important folders
+  [v] Setup AstroJS project
+  [v] install and configure Tailwind
+  [v] install and configure icon package
+  [v] configure aliasses to important folders
   
 # Project Structure 
   [] setup pages, components and assets folder
