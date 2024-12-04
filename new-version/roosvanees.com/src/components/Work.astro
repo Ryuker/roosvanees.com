@@ -1,0 +1,41 @@
+---
+import LinkButton from "./ui/LinkButton.astro";
+import WorkCard from "./ui/WorkCard.astro";
+---
+
+<section class="w-full flex justify-center">
+  <div class="container mb-10 flex items-center flex-col">
+    <h2 class="text-xl text-pink-800 border-b-2 border-pink-300 my-5">Worked on</h2>
+    <div class="flex space-x-5 flex-wrap justify-center gap-x-4 gap-y-9 max-w-5xl">
+      <WorkCard name="Het Marathon Interview" types="Editorial Researcher" clients="VPRO" years="2024" 
+        url="https://www.vpro.nl/programmas/marathoninterview.html" />
+
+      <WorkCard name="Nooit Meer Slapen" types="Editorial Researcher" clients="VPRO" years="2024" 
+        url="https://www.vpro.nl/nooitmeerslapen" />
+        
+      <WorkCard name="Wintergasten" types="Editorial Researcher" clients="VPRO" years="2020-2024" 
+        url="https://www.vpro.nl/programmas/wintergasten" />
+
+      <WorkCard name="Zomergasten" types="Editorial Researcher" clients="VPRO" years="2010-2024" 
+        url="https://www.vpro.nl/programmas/zomergasten" />
+
+      <WorkCard name="Vrij Nederland Publications" types="Freelance photographer & illustrations"  years="2020-present" />
+
+      <WorkCard name="Gedane Zaken" clients="De Standaard" years="2022"
+         url="https://www.standaard.be/tag/gedane-zaken"/>
+
+      <WorkCard name="Podcast Mijn Schuld" clients="Director" years="2020-2022" url="https://www.nrc.nl/mijnschuld/" />
+
+      <WorkCard name="Various Documentaries of Sunny Bergman" types="Researcher" />
+
+      <WorkCard name="2Doc: Hedy d'Ancona: Het Persoonlijke is Politiek" types="Director"  years="2020-2022"
+       url="https://www.npodoc.nl/documentaires/2022/10/hedy-d-ancona-het-persoonlijke-is-politiek" />
+       
+      <WorkCard name="IDFA" types="Researcher | Curator" clients="IDFA" years="2020-present" 
+        url="https://www.vpro.nl/programmas/wintergasten" />
+
+      <WorkCard name="Nederlands Film Festival" types="Researcher" years="2020-present" 
+        url="https://www.vpro.nl/programmas/wintergasten" />
+    </div>
+  </div>
+</section>

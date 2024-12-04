@@ -1,0 +1,33 @@
+---
+const { name, types, clients, years, url } = Astro.props;
+---
+
+{url ? <a href={url} target="_blank" class="px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600 hover:bg-pink-400"> 
+  <div>{name}</div>
+  <div class="text-sm space-x-0 flex flex-wrap">
+    {types && <span>{types}</span>}
+
+    {(types && clients) && <span class="pr-1">,</span>}
+    {clients && <span>{clients}</span>}
+    
+    {(clients || (types && !clients)) && <span class="pr-1">, </span>}
+    {years && <span>{years}</span>}
+  </div>
+</a>
+: 
+  <div class="px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600">
+    <div>{name}</div>
+    <div class="text-sm space-x-0 flex flex-wrap">
+      {types && <span>{types}</span>}
+
+      {(types && clients) && <span class="pr-1">,</span>}
+      {clients && <span>{clients}</span>}
+      
+      {(clients || (types && years)) && <span class="pr-1">, </span>}
+      {years && <span>{years}</span>}
+    </div>
+  </div>
+}
+
+  
+</a>
