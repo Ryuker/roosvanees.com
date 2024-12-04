@@ -1,0 +1,26 @@
+---
+import LinkButton from "./ui/LinkButton.astro";
+---
+
+<section class="w-full flex justify-center">
+  <div class="container mb-10 flex items-center flex-col">
+    <h2 class="text-xl text-pink-800 border-b-2 border-pink-300 my-5">Worked With</h2>
+    <div class="flex space-x-5 flex-wrap justify-center gap-x-4 gap-y-9 max-w-5xl">
+      <LinkButton icon="vpro" newTab={true} id="vpro" tooltipText="VPRO" classes="bg-transparent" iconClasses="text-6xl"
+        url="https://www.vpro.nl/"
+      />
+      <LinkButton icon="idfa" newTab={true} id="idfa" tooltipText="International Documentary Festival Amsterdam" classes="bg-transparent" iconClasses="text-6xl"
+        url="https://www.idfa.nl/en/"
+      />
+      <LinkButton icon="nff" newTab={true} id="nff" tooltipText="Nederlands Film Festival" classes="bg-transparent" iconClasses="text-6xl"
+        url="https://www.filmfestival.nl/"
+      />
+      <LinkButton icon="ep" newTab={true} id="ep" tooltipText="Esther Perel" classes="bg-transparent" iconClasses="text-5xl"
+        url="https://www.estherperel.com/"
+      />
+      <LinkButton icon="nrc" newTab={true} id="nrc" tooltipText="NRC: Mijn Schuld" classes="bg-transparent" iconClasses="text-6xl"
+        url="https://www.nrc.nl/mijnschuld/"
+      />
+    </div>
+  </div>
+</section>

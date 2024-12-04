@@ -7,6 +7,7 @@ const {
   id,
   tooltipText = '', 
   classes = " ",
+  iconClasses = "text-lg",
   colors = 'bg-pink-200 hover:bg-pink-300',
 } = Astro.props;
 
@@ -14,7 +15,7 @@ const {
 
 <button id={`btn-${id}`} aria-describedby="tooltip"
   class={`${classes} ${colors} border-2 border-pink-300 px-4 md:px-6 py-3 min-w-20 rounded-lg flex justify-center items-center`}>
-  {icon && <Icon name={icon} class="text-lg" /> }
+  {icon && <Icon name={icon} class={`${iconClasses}`} /> }
   {text && text}
 </button>
 

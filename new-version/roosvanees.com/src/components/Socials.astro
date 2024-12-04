@@ -2,10 +2,10 @@
 import LinkButton from "./ui/LinkButton.astro";
 ---
 
-<section>
-  <div class="container my-20 flex items-center flex-col">
-    <h1 class="text-3xl text-pink-800 border-b-2 border-pink-300">Social Media</h1>
-    <div class="flex space-x-4 my-10">
+<section class="w-full flex justify-center">
+  <div class="container mt-10 flex items-center flex-col">
+    <h2 class="text-3xl text-pink-800 border-b-2 border-pink-300">Social Media</h2>
+    <div class="flex space-x-4 my-5">
       <LinkButton icon="instagram" newTab={true} id="instagram" tooltipText="Instagram"
         url="https://www.instagram.com/roosvanees"
       />
@@ -21,9 +21,9 @@ import LinkButton from "./ui/LinkButton.astro";
       />
     </div>
     <div class="my-10 flex flex-col items-center space-y-5">
-      <h2 class="text-xl text-pink-800 font-semibold border-b-2 border-pink-300">Let's talk</h2>
+      <h2 class="text-xl text-pink-800 font-semibold border-b-2 border-pink-300">Get in Touch</h2>
       <LinkButton icon="email" newTab={true} id="email" tooltipText="roosvanees@hotmail.com"
-        url="mailto:roosvanees@hotmail.com"
+        url="mailto:roosvanees@hotmail.com" classes="px-20 py-5 md:px-20 md:py-5" iconClasses="text-4xl text-pink-900"
       />
     </div>
   </div>
