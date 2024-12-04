@@ -5,20 +5,25 @@ import LinkButton from "./ui/LinkButton.astro";
 <section class="w-full flex justify-center">
   <div class="container mt-10 flex items-center flex-col">
     <h2 class="text-xl text-pink-800 border-b-2 border-pink-300">Social Media</h2>
-    <div class="flex space-x-4 my-5">
+    <div class="flex space-x-4 my-5 flex-wrap md:flex-nowrap justify-center gap-x-2 gap-y-8 md:gap-0">
       <LinkButton icon="linkedin" newTab={true} id="linkedin" tooltipText="LinkedIn"
+        classes="basis-1/4"
         url="https://www.linkedin.com/in/roos-van-ees-66407024" iconClasses="text-2xl text-pink-900"
       />
-      <LinkButton icon="instagram" newTab={true} id="instagram" tooltipText="Instagram"
+      <LinkButton icon="instagram" newTab={true} id="instagram" tooltipText="Instagram" 
+        classes="basis-1/4"
         url="https://www.instagram.com/roosvanees" iconClasses="text-2xl text-pink-900"
       />
-      <LinkButton icon="x" newTab={true} id="x" tooltipText="X"
+      <LinkButton icon="x" newTab={true} id="x" tooltipText="X" 
+        classes="basis-1/4"
         url="https://twitter.com/roosvanees" iconClasses="text-2xl text-pink-900"
       />
-      <LinkButton icon="fb" newTab={true} id="fb" tooltipText="Facebook"
+      <LinkButton icon="fb" newTab={true} id="fb" tooltipText="Facebook" 
+        classes="basis-1/4"
         url="https://www.facebook.com/roosvanees" iconClasses="text-2xl text-pink-900"
       />
-      <LinkButton icon="tiktok" newTab={true} id="tiktok" tooltipText="TikTok"
+      <LinkButton icon="tiktok" newTab={true} id="tiktok" tooltipText="TikTok" 
+        classes="basis-1/4"
         url="https://www.tiktok.com/@roosvanees" iconClasses="text-2xl text-pink-900"
       />
     </div>
