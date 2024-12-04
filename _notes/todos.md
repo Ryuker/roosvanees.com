@@ -21,11 +21,12 @@
   [] Home
 
 # Components
-  [] Hero
-  [] Socials
-  [] Contact
-  [] Clients
-  [] Client Card
+  [v] Hero
+    [] subtitle
+  [v] Socials
+  [v] Experience
+  [v] Contact
+  [v] Footer
   
 
 
