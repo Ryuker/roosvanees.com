@@ -10,7 +10,7 @@ const { name, types, clients, years, url } = Astro.props;
     {(types && clients) && <span class="pr-1">,</span>}
     {clients && <span>{clients}</span>}
     
-    {(clients || (types && !clients)) && <span class="pr-1">, </span>}
+    {(clients || (types && years && !clients)) && <span class="pr-1">, </span>}
     {years && <span>{years}</span>}
   </div>
 </a>
@@ -23,7 +23,7 @@ const { name, types, clients, years, url } = Astro.props;
       {(types && clients) && <span class="pr-1">,</span>}
       {clients && <span>{clients}</span>}
       
-      {(clients || (types && years)) && <span class="pr-1">, </span>}
+      {(clients || (types && years && !clients)) && <span class="pr-1">, </span>}
       {years && <span>{years}</span>}
     </div>
   </div>
