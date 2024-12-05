@@ -18,5 +18,8 @@ export default defineConfig({
   ],
   output: 'static',
   site: 'https://ryuker.github.io',
-  base: "roosvanees.com"
+  build: {
+    assets: 'astro',
+    assetsPrefix: ''
+  }
 });
