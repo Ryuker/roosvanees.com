@@ -2,7 +2,7 @@
   "name": "roosvanees.com",
   "type": "module",
   "version": "0.0.1",
-  "homepage": "https://ryuker.github.io/roosvanees.com/new-version",
+  "homepage": "https://ryuker.github.io/roosvanees.com",
   "scripts": {
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d dist",
