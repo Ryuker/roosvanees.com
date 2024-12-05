@@ -16,5 +16,7 @@ export default defineConfig({
       }
     })
   ],
-  output: 'static'
+  output: 'static',
+  site: 'https://ryuker.github.io',
+  base: "roosvanees.com"
 });
