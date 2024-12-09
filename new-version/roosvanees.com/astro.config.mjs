@@ -1,13 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import tailwind from "@astrojs/tailwind";
-
 import icon from 'astro-icon';
+import relativeLinks from 'astro-relative-links';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), 
+  integrations: [tailwind(), relativeLinks(), 
     icon({
       iconDir: "src/assets/icons",
       include: {
@@ -21,7 +20,6 @@ export default defineConfig({
   outDir: './dist/docs',
   build: {
     assets: 'astro',
-    assetsPrefix: './'
   },
   trailingSlash: 'always'
 });
