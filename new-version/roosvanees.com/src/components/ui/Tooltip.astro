@@ -7,7 +7,7 @@ const {
 
 
 <astro-tooltip data-buttonid={buttonId}>
-  <div id="tooltip" role="tooltip" class="hide text-xs text-se-blue-500 bg-se-blue-150">
+  <div id="tooltip" role="tooltip" class="hidden text-xs text-se-blue-500 bg-se-blue-150">
     {text}
     <div id="arrow" class="bg-se-blue-150"></div>
   </div>
@@ -16,11 +16,14 @@ const {
 <style is:global>
   astro-tooltip {
     position: absolute;
+    pointer-events: none;
   }
 
   astro-tooltip #tooltip {
     width: max-content;
     position: absolute;
+    display: none;
+    opacity: 0;
     
     top: 0;
     left: 0;
@@ -36,13 +39,15 @@ const {
   }
 
   astro-tooltip #tooltip.hide {
-    transition: display 0.2s allow-discrete;
+    transition: display 0.2s allow-discrete, opacity 0.2s;
     animation: fade-out 0.2s forwards;
-    display: none;
+    display: block;
   }
 
   astro-tooltip #tooltip.show {
+    transition: display 0.2s allow-discrete, opacity 0.2s;
     animation: fade-in 0.2s forwards;
+    display: block;
   }
 </style>
 
@@ -95,15 +100,21 @@ const {
       }
 
       function showTooltip() {
+        tooltip.classList.remove('hidden');
         tooltip.classList.remove('hide');
         tooltip.classList.add('show');
-        // tooltip.style.display = 'block';
         update();
       }
 
       function hideTooltip() {
         tooltip.classList.remove('show');
         tooltip.classList.add('hide');
+        
+        // added for Safari support, remove when - https://caniuse.com/?search=allow-discrete has full support 
+        setTimeout(() => {
+          tooltip.classList.add('hidden');
+          tooltip.classList.remove('hide');
+        }, 1000);
       }
 
       [
