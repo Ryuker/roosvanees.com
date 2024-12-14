@@ -3,7 +3,7 @@ const { name, types, clients, years, url } = Astro.props;
 ---
 
 {url ? <a href={url} target="_blank" class="px-8 md:px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600 hover:bg-pink-400 text-center"> 
-  <div>{name}</div>
+  <p class="text-center inline-block whitespace-pre-line" >{name}</p>
   <p class="text-sm space-x-0 flex flex-wrap max-w-[300px]">
     {types && `${types}`}
 
@@ -16,7 +16,7 @@ const { name, types, clients, years, url } = Astro.props;
 </a>
 : 
   <div class="px-8 md:px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600 text-center">
-    <div class="text-center">{name}</div>
+    <p class="text-center inline-block whitespace-pre-line" >{name}</p>
     <p class="text-sm space-x-0 flex flex-wrap max-w-[300px]">
       {types && `${types}`}
 
