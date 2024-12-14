@@ -2,30 +2,30 @@
 const { name, types, clients, years, url } = Astro.props;
 ---
 
-{url ? <a href={url} target="_blank" class="px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600 hover:bg-pink-400"> 
+{url ? <a href={url} target="_blank" class="px-8 md:px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600 hover:bg-pink-400 text-center"> 
   <div>{name}</div>
-  <div class="text-sm space-x-0 flex flex-wrap">
-    {types && <span>{types}</span>}
+  <p class="text-sm space-x-0 flex flex-wrap max-w-[300px]">
+    {types && `${types}`}
 
-    {(types && clients) && <span class="pr-1">,</span>}
-    {clients && <span>{clients}</span>}
+    {(types && clients) && `, `}
+    {clients && `${clients}`}
     
-    {(clients || (types && years && !clients)) && <span class="pr-1">, </span>}
-    {years && <span>{years}</span>}
-  </div>
+    {(clients || (types && years && !clients)) && `, `}
+    {years && `${years}`}
+  </p>
 </a>
 : 
-  <div class="px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600">
-    <div>{name}</div>
-    <div class="text-sm space-x-0 flex flex-wrap">
-      {types && <span>{types}</span>}
+  <div class="px-8 md:px-10 flex items-center flex-col py-5 border-2 rounded-lg border-pink-600 text-center">
+    <div class="text-center">{name}</div>
+    <p class="text-sm space-x-0 flex flex-wrap max-w-[300px]">
+      {types && `${types}`}
 
-      {(types && clients) && <span class="pr-1">,</span>}
-      {clients && <span>{clients}</span>}
+      {(types && clients) && `, `}
+      {clients && `${clients}`}
       
-      {(clients || (types && years && !clients)) && <span class="pr-1">, </span>}
-      {years && <span>{years}</span>}
-    </div>
+      {(clients || (types && years && !clients)) && `, `}
+      {years && `${years}`</span>}
+    </p>
   </div>
 }
 
