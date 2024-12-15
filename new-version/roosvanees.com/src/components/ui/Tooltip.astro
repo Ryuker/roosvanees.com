@@ -106,15 +106,17 @@ const {
         update();
       }
 
+      // hides the tooltip after fade-out animation has ended
+      tooltip.addEventListener('animationend', (e) => {
+        if (e.animationName === 'fade-out'){
+          tooltip.classList.add('hidden');
+          tooltip.classList.remove('hide');
+        }
+      })
+
       function hideTooltip() {
         tooltip.classList.remove('show');
         tooltip.classList.add('hide');
-        
-        // added for Safari support, remove when - https://caniuse.com/?search=allow-discrete has full support 
-        setTimeout(() => {
-          tooltip.classList.add('hidden');
-          tooltip.classList.remove('hide');
-        }, 1000);
       }
 
       [
